@@ -5,35 +5,35 @@ interface CssRule {
    * @example ['margin', 'padding']
    */
   properties: {
-    [property: string]: string[];
-  };
+    [property: string]: string[]
+  }
   /**
    * The css conditions to generate utilities for.
    * @example ['hover', 'focus']
    */
-  conditions?: string[];
+  conditions?: string[]
   /**
    * Whether to generate responsive utilities.
    */
-  responsive?: boolean;
+  responsive?: boolean
 }
 
 export type RecipeRule =
-  | "*"
+  | '*'
   | ({
-      conditions?: string[];
-      responsive?: boolean;
-    } & { [variant: string]: boolean | string[] });
+      conditions?: string[]
+      responsive?: boolean
+    } & { [variant: string]: boolean | string[] })
 
 export interface StaticCssOptions {
   /**
    * The css utility classes to generate.
    */
-  css?: CssRule[];
+  css?: CssRule[]
   /**
    * The css recipes to generate.
    */
   recipes?: {
-    [recipe: string]: RecipeRule[];
-  };
+    [recipe: string]: RecipeRule[]
+  }
 }

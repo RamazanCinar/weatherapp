@@ -1,3 +1,10 @@
+import { css } from '../../styled-system/css';
+
 export default function Home() {
-  return <h1> My Weather app</h1>;
+  const test = '123';
+  return (
+    <>
+      <h1 className={css({ color: 'red' })}> My Weather app</h1>
+    </>
+  );
 }
